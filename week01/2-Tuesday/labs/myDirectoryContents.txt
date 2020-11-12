@@ -1,0 +1,22 @@
+.
+..
+.gitignore
+NewFile.txt
+deserts.txt
+glaciers.txt
+islands.txt
+lakes.txt
+mountains.txt
+myDirectoryContents.txt
+oceans.txt
+volcanoes.txt
+total 72
+-rw-r--r--  1 kimberlylong  staff   12 Nov 10 15:28 NewFile.txt
+-rw-r--r--  1 kimberlylong  staff  201 Nov 10 12:40 deserts.txt
+-rw-r--r--  1 kimberlylong  staff  174 Nov 10 12:40 glaciers.txt
+-rw-r--r--  1 kimberlylong  staff  130 Nov 10 12:40 islands.txt
+-rw-r--r--  1 kimberlylong  staff   97 Nov 10 12:40 lakes.txt
+-rw-r--r--  1 kimberlylong  staff  112 Nov 10 12:40 mountains.txt
+-rw-r--r--  1 kimberlylong  staff  138 Nov 10 15:32 myDirectoryContents.txt
+-rw-r--r--  1 kimberlylong  staff   69 Nov 10 12:40 oceans.txt
+-rw-r--r--  1 kimberlylong  staff  192 Nov 10 12:40 volcanoes.txt
