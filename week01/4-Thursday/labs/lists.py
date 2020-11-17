@@ -11,13 +11,26 @@ planet7 = "Uranus"
 planet8 = "Venus"
 
 # 2. Print out how many elements are in the planet list
-
-
+planets = ["Earth," "Jupiter", "Neptune", "Mars", "Saturn", "Murcury", "Uranus", "Venus"]
+lengthOfArray = len(planets)
+print(lengthOfArray)
+    
 # 3. Create a while loop that iterates through each of the items in the planet list
 # and changes them to lowercase .
+count = 0
+print(len(planets))
+
+while (count < len(planets) ):
+    print(f'{count}: {planets[count]}')
+    count +=1
+
+
 
 
 # 4. Add Pluto to the planet list.
+
+
+
 
 
 # 5. Combine the follwing 2 lists into a list called Houston.
