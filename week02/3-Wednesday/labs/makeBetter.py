@@ -4,7 +4,8 @@ d = {
     "Tracy": "541-990-0760",
     "Skittles": "666-666-6666"
 }
-
+def nm_in():
+    print(input("Name: "))
 
 def phonebook(d):
     print("Electronic Phone Book")
@@ -19,7 +20,7 @@ def phonebook(d):
     choice = input("What do you want to do (1-5)? ")
 
     if choice == "1":
-        name = input("Name: ")
+        name = nm_in()
         if name in d:
             print(d[name])
         else:
@@ -27,13 +28,13 @@ def phonebook(d):
         input("")
         phonebook(d)
     elif choice == "2":
-        name = input("Name: ")
+        name = nm_in()
         number = input("Number: ")
         d[name] = number
         input("Entry stored for {}".format(name))
         phonebook(d)
     elif choice == "3":
-        name = input("Name: ")
+        name = nm_in()
         del d[name]
         input("Deleted entry for {}".format(name))
         phonebook(d)

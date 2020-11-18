@@ -1,10 +1,31 @@
 
 
-# 1. Create an empty class called "Student"
+# # 1. Create an empty class called "Student"
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+        
+#     def greeting(self):
+#         return f'Good morning, {self.name}'
+        
 
 
-# 2. Create 5 students objects (instances of the class "Student") of "Student" types
 
+# # 2. Create 5 students objects (instances of the class "Student") of "Student" types
+# bob = Student("bob")
+# sue = Student("sue")
+# ron = Student("ron")
+# pam = Student("pam")
+
+
+# print(bob.greeting())
+# print(sue.greeting())
+# print(ron.greeting())
+# print(pam.greeting())
+
+
+# myString = str("string1")
+# myString2 = str("string2")
 
 # 3a. Create a "greeting" method inside of the class "Student" class that
 # takes as a parameter "name". The return of the  method should be
@@ -86,3 +107,80 @@
 # Super()
 
 # COMPOSITION
+
+
+
+
+# class Counter:
+#     def __init__(self):
+#         self.count = 0
+
+#     def inc_count(self):
+#         self.count +=1
+#         return self.count
+
+# count1 = Counter()
+
+# print("count 1 val: ", count1.inc_count())
+# print("count 1 val: ", count1.inc_count())
+# print("count 1", count1.inc_count())
+# print("count 1", count1.inc_count())
+# print("count 1", count1.inc_count())
+# print("count 1", count1.inc_count())
+# print("count 1", count1.inc_count())
+
+
+# count2 = Counter()
+
+# print("count 2", count2.inc_count())
+# print("count 2", count2.inc_count())
+# print("count 2", count2.inc_count())
+
+# print("count 1", count1.inc_count())
+
+
+
+
+# class Human:
+#     def __init__(self, name, last_name, bday, addy, tele, email):
+
+#         self.name = name
+#         self.last_name = last_name
+#         self.bday = bday
+#         self.addy = addy
+#         self.tele = tele
+#         self.email = email
+
+#     def age(self):
+
+
+# mike = Human("mike", "jordan", "8/8/1990", "123 seseme", "555-5555", "mikej@hotmail")
+ 
+# mike.age()
+
+class Human: 
+    def __init__(self, name, email, phone):
+
+        self.name = name
+        self.email = email
+        self.phone = phone
+
+    def greeting(self, other_person):
+        print('Greetings {}, I am Lord, {}!'.format(other_person.name, self.name))
+
+    Sonny = Human("Sonny", "sonny@hotmail.com", "483-485-4948")
+    Jordan = Human("Jordan", "jordan@ail.com" ,"495-586-3456")
+
+    Sonny.greeting(Jordan)
+    Jordan.greeting(Sonny)
+
+    print(f"This is the contact information to Sonny{Sonny.email}\n {Sonny.phone}")
+    print(f"This is the contact information to Jordan{Jordan.email}\n {Jordan.phone}")
+
+
+
+
+
+
+
+
