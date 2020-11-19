@@ -80,6 +80,37 @@
 # Create a new class called Car with the following method :
 # CarDetails which prints "Here are details of this car"
 
+# class Car:
+#     def __init__(self, make, model, color):
+#         self.make = make
+#         self.model = model
+#         self.color = color
+
+#     def carDetails(self):
+
+#         print("Here are the details of this car")
+
+# class Hybrid(Car):
+
+#     def carType(self):
+#         print("I am a hybrid car")
+
+# class Electric(Car):
+
+#     def carType(self):
+#         print("I am an electric car")
+
+# prius = Hybrid("toyota", "prius", "purple")
+# tesla = Electric("tesla", "model-s", "gold")
+
+# print(prius.make)
+# prius.carType()
+
+# print(tesla.make)
+# tesla.carType()
+
+
+
 # Create a new class called Hybrid that inherits from the Car class
 #  with the following method: CarType which prints "I am a hybrid car"
 
@@ -141,41 +172,121 @@
 
 
 
-# class Human:
-#     def __init__(self, name, last_name, bday, addy, tele, email):
+class Human:
+    def __init__(self, firstName, lastName, email):
 
-#         self.name = name
-#         self.last_name = last_name
-#         self.bday = bday
-#         self.addy = addy
-#         self.tele = tele
-#         self.email = email
+# Sonny = Human("Sonny","D", "sonny@hotmail.com", "483-485-4948")
+# Jordan = Human("Jordan","Z", "jordan@ail.com" ,"495-586-3456","jordan@ail.com" )
 
-#     def age(self):
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.freinds = []
+
+    def print_contact_info(self):
+        for friend in self.friends:
+            print(f'{friend.firstName} {friend.lastName} {friend.email}')
+
+    def add_friend(self, friendObj):
+        self.friends.append(friendObj)
+
+Jordan = Human("Jordan","Z","jordan@ail.com") 
+
+Sonny = Human("Sonny","D", "sonny@hotmail.com")
+Micha = Human("Micha","P", "MP@hotmail.com")
+
+Jordan.friends.append(Micha) 
+Jordan.friends.append(Sonny)
+
+Jordan.add_friend(Micha)
+Jordan.add_friend(Sonny)
+
+Jordan.print_contact_info()
+print(len.Jordan.friends)
+
+    # def age(self):
 
 
 # mike = Human("mike", "jordan", "8/8/1990", "123 seseme", "555-5555", "mikej@hotmail")
  
-# mike.age()
+# # mike.age()
 
-class Human: 
-    def __init__(self, name, email, phone):
+# class Human: 
+#     def __init__(self, name, email, phone):
 
-        self.name = name
-        self.email = email
-        self.phone = phone
+#         self.name = name
+#         self.email = email
+#         self.phone = phone
 
-    def greeting(self, other_person):
-        print('Greetings {}, I am Lord, {}!'.format(other_person.name, self.name))
+#     def greeting(self, other_person):
+#         print('Greetings {}, I am Lord, {}!'.format(other_person.name, self.name))
 
-    Sonny = Human("Sonny", "sonny@hotmail.com", "483-485-4948")
-    Jordan = Human("Jordan", "jordan@ail.com" ,"495-586-3456")
+    # Sonny = Human("Sonny", "sonny@hotmail.com", "483-485-4948")
+    # Jordan = Human("Jordan", "jordan@ail.com" ,"495-586-3456")
+    # student.
 
-    Sonny.greeting(Jordan)
-    Jordan.greeting(Sonny)
+#     Sonny.greeting(Jordan)
+#     Jordan.greeting(Sonny)
 
-    print(f"This is the contact information to Sonny{Sonny.email}\n {Sonny.phone}")
-    print(f"This is the contact information to Jordan{Jordan.email}\n {Jordan.phone}")
+#     print(f"This is the contact information to Sonny{Sonny.email}\n {Sonny.phone}")
+#     print(f"This is the contact information to Jordan{Jordan.email}\n {Jordan.phone}")
+
+
+# class Button:
+#     def __init__(self):
+#         self.count = 0
+#     def click(self):
+#         self.count +=1
+
+#         if(self.count > 2):
+#             print('do you need help')
+#             self.count = 0
+
+# navBut = Button()
+# helpBut = Button()
+
+# print(f'nav {navBut.count}')
+# print(f'help {helpBut.count}')
+
+# navBut.click()
+# navBut.click()
+# navBut.click()
+# navBut.click()
+
+# print(f'nav {navBut.count}')
+# print(f'help {helpBut.count}')
+
+
+# navBut.click()
+# navBut.click()
+# navBut.click()
+
+# print(f'nav {navBut.count}')
+# print(f'help {helpBut.count}')
+
+# class OurString(str):
+
+#     def reverse(self, word):
+
+#         revString = ''
+#         for char in word:
+#             revString = char + revString
+
+#         return revString
+
+# myString = OurString('hello')
+
+# print(myString.capitalize())
+
+# print(myString.reverse('hello'))
+
+
+
+
+
+
+
+
 
 
 
