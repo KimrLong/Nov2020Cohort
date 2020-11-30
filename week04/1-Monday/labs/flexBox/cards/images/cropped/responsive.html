@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+                div{
+            width: 50vw;
+            height: 50vh;
+            background-color: purple;
+        }
+        p{
+            width: 50%;
+            height: 50%;
+            background-color: red;
+        } 
+        body {
+            margin: 0px;
+        }
+        .container {
+            background-color: purple;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        li{
+            list-style: none;
+            padding: 10px;
+        }
+        ul{
+            display:flex;
+            flex-direction: column;
+        }
+        nav{
+            background-color: rgb(201, 198, 198);
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        @media screen and (max-width: 650px){
+            .container {
+                background-color: green;
+            width: 50vw;
+            height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>Comp log</li>
+            </ul>
+            <ul>
+                <li> about</li>
+                <li> blog</li>
+                <li> cam</li>
+                <li> contact</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
