@@ -50,6 +50,13 @@ white = #FFFFFF
 .cp-anchor-lightGray a{
     color: #E5E5E5
 }
+.cp-text-accent a{
+    color: #e5e5e5;
+}
+.cp-text-accent a:hover{
+    color: #fca311;
+    text-decoration: underline;
+}
 
 .dark {
     background-color: rgb(207, 207, 207);
