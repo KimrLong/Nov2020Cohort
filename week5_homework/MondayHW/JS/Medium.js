@@ -134,6 +134,11 @@
 
 // console.log(sum);
 
+//~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ACRONYM ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 
+// var string1 = ("very", "important", "person");
 
+// var acro = string1.reduce(function()
 
+// const acronym = ("Very Important Person").split(' ').map(acronym => acronym[0]).join('');
+// console.log(acronym);
