@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        background-color: rgb(241, 31, 224);
+        padding: 20px;
+        color: lime;
+        width: 200px;
+        height: 200px;
+    }
+    p{
+        background-color: rgb(4, 41, 250);
+        color: lime;
+    }
+    .newClassRule{
+        background-color: rgb(0, 238, 255);
+        color:rgb(68, 0, 255)
+    }
+
+</style>
+
+<body>
+    Hello, World!
+
+
+
+    <button onclick='alert("hello")'>Click me!</button>
+
+
+
+    <!-- <div onmouseover="greeting()">
+        Hello
+    </div> -->
+    <p style>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, nostrum incidunt vitae aperiam optio officiis. Obcaecati velit numquam voluptatum cum, consectetur reiciendis dicta laboriosam labore dignissimos doloremque laudantium quia ipsa?
+
+    </p>
+
+
+</body>
+
+<script>
+    const greeting = () => {
+        console.log("hello there")
+    }
+    // alert("hello")
+//retrieve our element out of the dom
+    let p = document.querySelector('p');
+//attach event listener to element
+    p.onclick = ()=>{
+        p.setAttribute('style', "background-color: orange; padding: 5px;")
+        p.setAttribute('class', "newClassRule")
+    }
+</script>
+
+</html>
