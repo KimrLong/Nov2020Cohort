@@ -11,12 +11,37 @@ it should return an object like this:
 }
 
 */
+let sumPlusMinus = arr => {
+    arr.reduce((acc, elem)) =>{
+        return (
+            {
+                plus: elem > 0 ? acc.plus + elem : acc.plus,
+                minus: elem < 0 ? acc.minus + elem : acc.minus
+            }
+        )
+    }, {plus: 0, minus: 0})
+}
+
+
+
 
 
 var nums = [10, -12, 30, -1, -8, 0, 14, -33, 20];
+// let obj = {positive:0, negative: 0}
+// function sumPlusMinus(nums) {
+//     for( let x of nums) {
+//         if(x > 0) {
+//             obj.positive += x;
 
-// Write code here
+//         }
+//         else
+//             obj.negative += x;
+//     }
+// }
 
-console.log(sumPlusMinus(nums));
-// {plus: 74, minus: -54}
+// // Write code here
+
+// sumPlusMinus(nums)
+// console.log(obj);
+// // {plus: 74, minus: -54}
 

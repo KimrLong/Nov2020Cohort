@@ -3,13 +3,13 @@
 Declare mult() function that will multiply values of the x,y,z 
 fields of the passed object
 */
-var obj = {
-    x: 5,
-    y: 20,
-    z: 3
-}
+// var obj = {
+//     x: 5,
+//     y: 20,
+//     z: 3
+// }
 
-console.log(mult(obj));
+// console.log(mult(obj));
 //300
 
 
@@ -40,7 +40,13 @@ var person2 = {
 }
 
 let person = (obj) => {
-    let {name:n, info:{country:c, age:a}, postsQuantity:p=0} = obj;
-    console.log(`name ${n} country ${c} age ${a} posts ${p}`);
+    let {name:n, info:{country:c, age:a}, postsQuantity:p=0} = obj
+
+    console.log(`name ${n} country ${c} age ${a} postsQuantity ${p}`);
 }
+
+// let person = (obj) => {
+//     let {name:n, info:{country:c, age:a}, postsQuantity:p=0} = obj;
+//     console.log(`name ${n} country ${c} age ${a} posts ${p}`);
+// }
 person(person2);
