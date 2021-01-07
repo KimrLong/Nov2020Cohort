@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<p id="demo"></p>
+
+
+
+
+<script>
+
+    try{
+        let num = 1;
+        num.toPrecision(500);
+
+    }
+    catch(e){
+        //console.log(e);
+        if(e instanceof RangeError)
+        console.log('something wrong precision')
+        let = document.querySelector('#demo')
+        p.textContent= "wrong woth precision";
+
+    }
+    else{
+        console.log('genetic error')
+    }
+
+    // let num = 1;
+    // num.toPrecision(500)
+
+    // try{
+
+    //     alerxt('welcome to the site')
+    // }
+    // catch{
+    //     console.log('error')
+
+    // }
+</script>
+
+
+    
+</body>
+</html>
