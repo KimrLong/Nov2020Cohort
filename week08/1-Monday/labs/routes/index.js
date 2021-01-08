@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
 
-    axios.get()
+    // axios.get()
 
     res.send('who will win the battle?')
 })
