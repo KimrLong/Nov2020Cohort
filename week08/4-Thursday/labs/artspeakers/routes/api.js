@@ -1,4 +1,3 @@
-
 const express = require("express");
 const router = express.Router();
 const feedbackData = require('../data/feedback.json');
@@ -9,11 +8,11 @@ router.use(express.urlencoded({extended: false}));
 
 
 router.get("/api", (req, res) => {
-    res.json(feedbackData)
+  res.json(feedbackData)
 });
 
 router.post('/api', (req, res) => {
-
+  
     //grab data form request - body-parser 
     
     // let name = req.body.name;

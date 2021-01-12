@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
-<%- include('partials/template/head.ejs')  %> 
+    
+    <%- include('partials/template/head.ejs')  %> 
 
 </head>
 
 <body id="speakerList">
-
+    <%- include('partials/content/header.ejs')  %> 
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
@@ -17,8 +17,7 @@
                         <div class="row">
 
                             <% speakers.forEach(speakerObj => { %>
-                            
-                            
+                             
                             <div class="col-sm-8 ">
                                 <h3 class="speakerslist-title"><%= speakerObj.title %> </h3>
                                 <h5 class="speakerslist-name">with <a href="/speakers/<%= speakerObj.shortname %>"><%= speakerObj.name %> </a>
@@ -46,15 +45,14 @@
                         check out some of the work from our speakers.</p>
                     <div class="pixgrid clearfix">
                         
-                        <% artwork.forEach(art => { %>
-                                <img src="/images/artwork/<%= art %>" alt="">
-                        <% }) %>
+                        <%- include('partials/content/artwork.ejs')  %> 
                     </div>
                 </article>
             </aside><!-- secondary -->
         </div>
     </div><!-- container -->
-<%- include ('partials/template/jsdefault.ejs') %> 
+
+    <%- include('partials/template/jsdefault.ejs')  %> 
 
 
 </body>
