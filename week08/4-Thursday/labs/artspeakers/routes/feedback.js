@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/feedback", (req, res) =>{
-    res.send('feedback')
-})
-
-
-
+router.get("/feedback", (req, res) => {
+    res.render("feedback", {
+        pageTitle: "Roux Meetups -Feedback",
+        pageId: 'feedback',
+        artwork: []
+    });
+});
 
 module.exports = router;
