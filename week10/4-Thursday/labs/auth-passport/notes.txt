@@ -1,0 +1,21 @@
+install
+-express
+-ejs 
+-cookie-session
+-sql- 
+- pg pghstore
+-helmwt
+
+route
+-home page
+-login- get
+-login- post
+-registration (get)
+-registration(post)
+
+
+
+ejs
+-login
+-registration
+
