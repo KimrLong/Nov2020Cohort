@@ -7,8 +7,10 @@ const db = require('../models');
 
 //req.body.username
 //req.body.password
+//this is a call back functoin. saying we are returning something. implicit
 const init = (passport)=>{ //passport uses done instead of next
     passport.use( new localStrategy((username, password, done)=>{
+        console.log(`inside passport.use: username ${username}, password: ${password}`);
         db.users.findAll({where: {username: username}})
         .then(records =>{
             if(records != null){
@@ -40,6 +42,7 @@ const init = (passport)=>{ //passport uses done instead of next
 
     passport.deserializeUser((id, done)=>{
         //checking to see if user is valid w/ cookie that was passed from request.. unpack the cookie.
+        console.log('deserializing user');
         db.users.findByPk(id) //from session
         .then(record =>{
             done(null, record)

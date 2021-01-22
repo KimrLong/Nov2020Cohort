@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const authReq = require('../auth')
+const authReq = require('../auth') //in index page so no need for /index
 ;
 router.get('/', (req, res) => {
     res.send("home page")
 });
 
 router.get('/protected', authReq, (req, res)=>{
-
-    res.send('protected')
+    console.log('authenticated');
+    res.send('protected')  //there is a function from passport to see if our user is valid
 })
 
 router.get('/error', (req, res)=>{
@@ -17,9 +17,10 @@ router.get('/error', (req, res)=>{
 })
 
 router.get('/logout', (req, res)=>{
-    req.logout();
+    //session is cleared
+    req.logout(); //put on request object bby passport
 
-    res.redirect('/')
+    res.redirect('/') //redirects to home page
 })
 
 

@@ -5,8 +5,9 @@ const helmet = require('helmet');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-const passport = require('passport');
-require('./auth/passport-config')(passport);
+const passport = require('passport'); //one instance of passport
+
+require('./auth/passport-config')(passport); 
 
 var cookieSession = require('cookie-session');
 app.use(cookieSession({
@@ -22,13 +23,18 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(helmet());
 
-app.use(passport.initialize());
+app.use(passport.initialize()); //caslss the function from the passport config file
 app.use(passport.session());
 
 //sub routes
 app.use(require('./routes'));
 app.use(require('./routes/login'));
 app.use(require('./routes/registration'));
+
+app.listen(3000, () => {
+
+    console.log('listening on port 3000');
+})
 
 
 
