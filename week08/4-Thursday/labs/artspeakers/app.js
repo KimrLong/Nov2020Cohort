@@ -1,36 +1,40 @@
 
+const express = require("express");
 
-const express = require('express');
 const app = express();
-const reload = require('reload');
+//const io = require('socket.io')();
 const socket = require('socket.io');
-app.set('view engine', 'ejs');
-app.get('/', (req, res) => {
-    res.render('index')
-})
-let server = app.listen(3000, () => {
-    console.log(`listening on port 3000`);
+//const reload = require('reload');
+
+
+//ejs
+app.set("view engine", "ejs");
+
+//public
+app.use(express.static("public"));
+
+//route references
+app.use(require("./routes/index"));
+app.use(require("./routes/speakers"));
+app.use(require("./routes/feedback"));
+app.use(require("./routes/api"));
+app.use(require("./routes/chat"));
+
+let server = app.listen(3005, () => {
+  console.log(`listening on port 3005`);
 });
+//io.attach(server)
 let io = socket(server);
+
 io.on('connection', (socket)=>{
-    //this message will broadcast out to each connected client 
-    console.log('client conntected');
-    socket.emit('chatMessage', {msg: "Hello from our backend"});
-    socket.on('msgFromClient', (msgClient)=>{
-        console.log(msgClient);
-        //broadcasting out to all connected clients
-        io.emit('msgFromServer', msgClient)
-    })
-});
-reload(server, app);
 
+  //listening for messages from client
+  socket.on('postMessage', (msg)=>{
 
-
-
-
-//homework
-//router.delete
-//grab id (key) out of the array
-//$.ajax. change method to delete. as a parameter .
-//make endpoint in api that has rout
-//once grab id from request. go to data and filter request
+    console.log(msg);
+    //broadcast to all connected servers
+    io.emit('updateMessages', msg)
+  })
+})
+//reloads pages
+//reload(server, app);

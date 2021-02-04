@@ -3,7 +3,7 @@ const router = express.Router();
 let dataFile = require('../data/data.json');
 //{speakers: [{}, {}, {}]}
 router.get('/', (req, res) => {
-  
+
     let pageSpeakers = dataFile.speakers;  ///array of speakers  [{}, {}, {}]
 
     

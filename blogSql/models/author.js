@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      author.hasMany(model.blog)
+      models.author.hasMany(models.blog, {forgeinKey: 'roleID'})
     }
   };
   author.init({

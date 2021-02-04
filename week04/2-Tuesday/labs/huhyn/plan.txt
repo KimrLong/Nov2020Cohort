@@ -1,31 +1,4 @@
 
-<<<<<<< HEAD
-
-- header
-   - md larger 
-   -sm image
-    -title- layer 
-    -opacity - layer
-    -video- layer
-
-
-
-
--navigation 
-    -bs navigation
-
-
-
-
-
-
-main content-
-
-
-
-
--footer
-=======
 - header 
     - md larger - video background 
     - sm - image
@@ -41,4 +14,3 @@ main content-
 
 
 - footer
->>>>>>> 98df85dd74a9048f45d4f9a753bc30014a5ffa1b
