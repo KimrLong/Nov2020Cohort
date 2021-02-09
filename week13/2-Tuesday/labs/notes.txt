@@ -1,0 +1,47 @@
+!. react hook useState
+
+import{useState, useEffect} from 'react'
+
+funcrion App() {
+
+    const [count, setCount] = useState(0) <--initial # to start count = 0
+    //first in array is state variables name
+    // second is the function that changes/effects the STATE variable
+
+
+    return(
+        <div className="App">
+        <h1>hello, world</h1>
+        <h3>this is count: {count}</h3>
+        <button onClick={()=> setCount(count + 1)}>increment</button>
+        <button onClick={()=> setCount(count - 1)}>decrement</button>
+        </div>
+    );
+}
+
+2. React UseEffect
+
+function App() {
+    const[articles, setArticles] = useState([]);
+
+
+    useEffect(()=>{
+        const fetchDataSetArticle = async () =>{
+            const url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=713c8aaef64445869dfa951229e58456";
+
+            const response = await fetch(url)
+            const data = await response.json()
+            console.log(data);
+            setArticles(data.articles)
+        };
+        fetchDataSetArticle();
+
+    },[]); // depedency array
+//blank array tells it it hasnt changed so it will stop the loop//closure!!!!!!!!
+//use effect is called when it is mounted to the DOM
+
+}
+
+useEffect(()=>{}) //ran infitite //state changing
+useEffect(()=>{},[]) //depended
+useEffect(()=>{},[stateVariableToTrack])//fire only when a state variable has changed

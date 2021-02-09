@@ -1,0 +1,22 @@
+body{
+    background-color: lightblue;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+button{
+    padding: 20px;
+    font-size: 60px;
+}
+p{
+    padding: 20px;
+    font-size: 60px;
+    background-color: lightcoral;
+}

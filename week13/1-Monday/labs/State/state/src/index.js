@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 // import './assets/styles2.css'
 
 // import App from "./App2";
-import News2 from './components/News2'
+import App3 from './App3'
 
 ReactDOM.render(
   <React.StrictMode>
-    <News2 />
+    <App3 />
   </React.StrictMode>,
   document.getElementById("root")
 );
