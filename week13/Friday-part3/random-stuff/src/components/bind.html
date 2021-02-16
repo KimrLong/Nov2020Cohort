@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    Bind, Call, Apply
+<!--pply allows to call function-->
+
+    <script>
+        let bob = function(num, str){
+        console.log('bob', num, str, this);
+        return true;
+        }
+
+        // bob(1, 'hello');
+
+        let bill = {
+        name: 'Bill Murray',
+        movie: 'Lost in Translation',
+            myMethod: function(fn){
+            // fn();  //runs the function that was just passed in
+            let n = arguments[1];
+            let s = arguments[2];
+            // fn.apply(bill, [n, s]);
+            fn.call(bill, n, s);
+            }
+        }
+
+        // bill.myMethod(bob);
+        // bob.call(bill, 2, 'bye-bye-bye')
+        // bob.apply(bill, [2, 'bye-buh-byeeee'])
+        // bill.myMethod(bob, 3, 'ciao, bello')
+
+        // let result = bob.bind(bill, 7, 'hasta la vista');
+        // result();
+
+        // let toggle = new Toggle()
+
+        // toggle.handleClick()
+
+    </script>
+
+
+</body>
+</html>
