@@ -14,10 +14,7 @@ const Header = () => {
       <li className="nav-item active">
         <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
       </li>
-<<<<<<< HEAD
-=======
-     
->>>>>>> b35aecdc772a565a47a78d9c40f27a75b9099498
+    
       <li className="nav-item">
         <Link className="nav-link" to="/adjustments">Adjustments</Link>
       </li>
