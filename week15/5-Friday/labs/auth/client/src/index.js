@@ -13,6 +13,7 @@ import ReduxThunk from 'redux-thunk';
 import {createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './reducers/reducer';
+import requireAuth from './requireAuth';
 import {
   BrowserRouter as Router,
   Route, Switch
@@ -37,9 +38,9 @@ ReactDOM.render(
       <BaseLayout>
           <Switch>
             <Route exact path='/' component={App}/>
-            <Route path='/welcome' component={Welcome}/>
+            <Route path='/welcome' component={requireAuth(Welcome)}/>
             <Route path='/signup' component={Signup}/>
-            <Route path='/feature' component={Feature}/>
+            <Route path='/feature' component={requireAuth(Feature)}/>
             <Route path='/signout' component={Signout}/>
             <Route path='/signin' component={Signin}/>
           </Switch>
