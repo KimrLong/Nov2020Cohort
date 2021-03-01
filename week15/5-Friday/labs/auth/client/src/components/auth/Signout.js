@@ -20,6 +20,8 @@ const Signout = () => {
 
   <button className="btn btn-info" onClick={logOut}>Sign Out</button>
  </div>
+
+
 };
 
 export default Signout;
