@@ -1,28 +1,7 @@
-import React, {useState} from "react";
-import { Link } from 'react-router-dom';
-import {useDispatch} from 'react-redux';
-import {signUp} from '../../actions/index';
+import React from "react";
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
-
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
-  const history = useHistory();
-
-  const handleSubmit = (e) => {
-    
-    e.preventDefault();
-
-    // call action
-    //pass the email address and password to our action
-
-    dispatch(signUp({
-      email: email,
-      password: password
-    }))
-
-  }
 
   return (
   <div className="mt-5">
@@ -35,15 +14,14 @@ const Signup = () => {
 
             <h2>Sign Up</h2>
 
-            <form onSubmit={handleSubmit} className="form">
+            <form action="" method="post" className="form">
 
               <div className="form__field">
-                <input type="email" onChange={(e)=>setEmail(e.target.value)} value={email} placeholder="enter email address" />
-                
+                <input type="email" placeholder="enter email address" />
               </div>
 
               <div className="form__field">
-                <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="enter password" />
+                <input type="password" placeholder="enter password" />
               </div>
 
               <div className="form__field">
